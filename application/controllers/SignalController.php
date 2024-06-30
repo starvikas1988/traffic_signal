@@ -15,7 +15,13 @@ class SignalController extends CI_Controller {
         $this->load->view('signal_form');
     }
 
+    public function aa(){
+    	echo "string";
+    	die();
+    }
+
     public function start_signal() {
+
         $this->form_validation->set_rules('sequence', 'Sequence', 'required');
         $this->form_validation->set_rules('green_interval', 'Green Interval', 'required|integer');
         $this->form_validation->set_rules('yellow_interval', 'Yellow Interval', 'required|integer');
